@@ -1,0 +1,26 @@
+AUV tools by Ian Katz (ijk5@mit.edu)
+
+A web interface designed to sit on an AUV and provide a direct interface to recorded data.
+
+This website is meant to be installed on an AUV, and assumes that you have 
+a mysql server on the AUV as well.  Further, it assumes that the database 
+records data in the proper format (see attached schema file).
+
+This code is currently lacking excessive comments, and the KML generation needs to be
+revamped.
+
+Built and tested on Ubuntu Linux; all documentation will assume that OS.
+
+In order to install MOOS-web-gui: 
+ 0. you will need to apt-get install the following (and maybe more):
+      php-mdb2-driver-mysql (pulls in php-pear, php-mdb2, and php5-mysql)
+      apache2
+ 1. set your web root (the htdocs directory) in the sites-available file
+ 2. remove the default symlink in /etc/apache/sites-enabled and put the MOOS one there:
+        cp _etc_apache2_sites-available_moos /etc/apache2/sites-available/moos
+        cd /etc/apache2/sites-enabled
+        rm 000-default
+        ln -s ../sites-available/moos ./000-moos
+ 3. modify your php include path (in php.ini) to includes this php directory
+    include_path = ".:/usr/share/php:/usr/share/pear:/PATH/TO/MOOS-web-gui/php"
+ 4. modify php/report_dbinit.php to give the location of your mysql db

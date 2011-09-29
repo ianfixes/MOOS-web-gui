@@ -1,0 +1,89 @@
+body
+{
+    font-family: helvetica, arial, sans-serif;
+} 
+
+#menu
+{
+    border-right:1px solid #99f;
+    padding: 0px 20px 20px 0px;
+    margin: 0px 20px 20px 0px;
+}
+
+#menu a
+{
+    text-decoration:none;
+    color:#333;
+} 
+
+#menu a:hover
+{
+    color:#000;
+}
+
+#page
+{
+    padding-bottom:4em;
+    border-bottom:1px solid #99f;
+    margin-bottom:2em;
+}
+
+table.tabular
+{
+    border-collapse:collapse;
+}
+
+table.tabular th
+{
+    padding:0ex 1ex;
+}
+
+table.tabular td
+{
+    padding:.4ex 1ex;
+    border:1px solid black;
+    font-size:smaller;
+} 
+
+table.tabular th.section
+{
+    text-align:left;
+    padding-top:1em;
+    border:0px;
+}
+
+div.clickbox
+{
+    cursor:pointer; 
+    border:1px solid black; 
+    padding:1ex; 
+    margin-bottom:1em;
+}
+
+ul.missiongroup li
+{
+    overflow:hidden; 
+    width:50em;
+    white-space:nowrap;
+}
+
+ul.missiongroup li span.notes
+{
+    color:#333;
+    margin-left:1ex;
+    font-size:smaller;
+}
+
+div.contactsheet div.imgbox
+{
+    float:left;
+    margin:0.5ex;
+    border:1px solid black;
+}
+
+div.contactsheet div.imgbox img
+{
+    border:0px;
+    width:160px;
+    height:120px;
+}

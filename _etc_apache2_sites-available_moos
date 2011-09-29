@@ -1,0 +1,26 @@
+<VirtualHost *:80>
+	ServerAdmin ijk5@mit.edu
+
+	DocumentRoot /PATH/TO/MOOS-web-gui/htdocs
+	<Directory />
+		Options FollowSymLinks
+		AllowOverride None
+	</Directory>
+	<Directory /PATH/TO/MOOS-web-gui/htdocs/>
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride None
+		Order allow,deny
+		allow from all
+	</Directory>
+
+
+	ErrorLog /var/log/apache2/moos.error.log
+
+	# Possible values include: debug, info, notice, warn, error, crit,
+	# alert, emerg.
+	LogLevel warn
+
+	CustomLog /var/log/apache2/moos.access.log combined
+
+
+</VirtualHost>
